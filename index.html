@@ -1,0 +1,26 @@
+{{ define "index"}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<body>
+    <h1>Rotas disponíveis:</h1>
+    <ul>
+        <li><a href="http://localhost:8000/times">Ver times</a></li>
+        <li><a href="http://localhost:8000/jogadores">Ver jogadores</a></li>
+    </ul>
+    <form action="/times/{{.}}" method="GET">
+        <label for="team-id">Insira o ID da equipe:</label>
+        <input type="text" id="team-id" name="id">
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+
+</html>
+{{ end }}
